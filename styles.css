@@ -1,0 +1,164 @@
+:root {
+    --chapter-checkbox-color: white;
+    --chapter-checkbox-color-selected: #008000;
+}
+
+
+/* 1.1 vw 20px */
+/* Add CSS here */
+html {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    overflow: hidden;
+    background-color: #bfffbf;
+}
+
+.container-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 60%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 10px 5px #8bf88b;
+}
+
+.container-current-progress {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-curriculum {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.curriculum-headline {
+    height: 10%;
+    margin: 5px;
+}
+
+.container-chapters {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.chapter {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.container-picture {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-space {
+    background-color: var(--chapter-checkbox-color);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.selected .container-picture .picture-space {
+    background-color: var(--chapter-checkbox-color-selected);
+}
+
+.picture {
+    height: 45px;
+    width: 45px;
+}
+
+.chapter-text {
+    text-align: left;
+    width: 80%;
+}
+
+.selected .picture-space .picture {
+    background-image: url(check-mark-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.2vw;
+    filter: invert(100%) sepia(0%) saturate(21%)
+     hue-rotate(306deg) brightness(105%) contrast(105%);
+}
+
+circle {
+    stroke-width: 12px;
+    fill: transparent;
+    stroke: var(--chapter-checkbox-color-selected);
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.container-progress {
+    position: absolute;
+    height: 52px;
+    width: 52px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 10px 5px;
+    margin: 0;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.percentage-container {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+    padding: 0 0 1px 0;
+    text-align: center;
+}
+
+.percentage-text {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
